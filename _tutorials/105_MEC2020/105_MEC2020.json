@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+        "label":"First rest",
+        "descFile": "105_MEC2020_step-00-desc.html",
+        "xmlFile": "105_MEC2020_step-00.xml",
+        "editorLines":1,
+        "xpaths": [
+            {"rule":"count(//mei:rest) = 1", "renderanyway": false, "hint": "You need a rest element."},
+            {"rule":"count(//mei:rest/@*) = 1 and //mei:rest/@dur", "renderanyway": false, "hint": "You need a @dur attribute."},
+            {"rule":"//mei:rest/@dur = '4'", "renderanyway": true, "hint": "The @dur attribute uses values like '1','2', or '4'. Use the latter for a quarter rest."}
+        ]
+    },
+    {
+        "label":"First note",
+        "descFile": "105_MEC2020_step-01-desc.html",
+        "xmlFile": "105_MEC2020_step-01.xml",
+        "editorLines":2,
+        "xpaths": [
+            {"rule":"count(//mei:rest) = 1", "renderanyway": false, "hint": "You need a rest element."},
+            {"rule":"count(//mei:note/@*) = 3 and //mei:note/@pname and //mei:note/@dur and //mei:note/@oct", "renderanyway": false, "hint": "You need a note element with @pname, @dur and @oct attributes."}
+        ]
+    },
+    {
+        "label":"Finish first measure's contents",
+        "descFile": "105_MEC2020_step-02-desc.html",
+        "xmlFile": "105_MEC2020_step-02.xml",
+        "editorLines":3,
+        "xpaths": [
+            {"rule":"count(//mei:note) = 2", "renderanyway": true, "hint": "You need two not elements."},
+            {"rule":"//mei:note[1]/@pname and //mei:note[1]/@dur and //mei:note[1]/@oct", "renderanyway": true, "hint": "The first note element has to have @pname, @dur and @oct attributes."},
+            {"rule":"//mei:note[2]/@pname and //mei:note[2]/@dur and //mei:note[2]/@oct", "renderanyway": true, "hint": "The second note element has to have @pname, @dur and @oct attributes."}
+        ]
+    }
+  ],
+  "end":"105_MEC2020_end.html",
+  "resp":[
+    {
+        "name":"Benjamin W. Bohl",
+        "affiliation":"Goethe-University Frankfurt"
+    }
+  ]
+}
