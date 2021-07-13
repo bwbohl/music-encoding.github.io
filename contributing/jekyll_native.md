@@ -1,4 +1,4 @@
-# Install JEkyll natively on your local machine
+# Install Jekyll natively on your local machine
 
 ## Prerequisites
 
