@@ -26,15 +26,16 @@ In order to work with the repo offline you neet to clone the code to your local 
 
 Create a new branch for your changes on your local Git repository. You should make it a descriptive name, like ‘feature_new-project’, ‘fix_broken-links’ or similar.
 
-### Step 3: Install Jekyll
+### Step 3: Test your changes locally
 
-Run `bundle install` in the root directory of your local Git repository directory. This will install all of the requirements for running the site locally. 
+In case you have made bigger changes you might want to make sure the website behaves as expected before committing to your fork and opening a pull request against the upstream repository.
 
-Windows user should check out this step-by-step guide to setting up Jekyll on Windows: http://jekyll-windows.juthilo.com/
+In order to do so you have to run the Jekyll locally (for dtails on Jekyll visit (https://jekyllrb.com)[https://jekyllrb.com]). Jekyll is the engine behind Github Pages, which is used to host the MEI website.
 
-### Step 4. Run the Jekyll server
+There are several options to do so, two of which are described within this repository:
 
-You can run the Jekyll service locally with `bundle exec jekyll serve --baseurl=""`. This will compile the site and start serving the content locally. Since compiling can take a while, you can add the option `-V` to get a more verbose output and information about the running compilation steps. Once it's ready, you can open your browser and visit `http://localhost:4000` to see your local version of the site.
+1. [Install Jekyll natively](contributing/jekyll_native.md) on your local machine
+2. [Use a Docker Container](contributing/jekyll_docker.md) to execute Jekyll
 
 ### Step 5. Make your changes and commit
 
